@@ -1,0 +1,11 @@
+{
+  "employees": {
+    "id": "INT",
+    "name": "STRING",
+    "dept_id": "INT"
+  },
+  "departments": {
+    "id": "INT",
+    "dept_name": "STRING"
+  }
+}
