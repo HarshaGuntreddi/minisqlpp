@@ -32,7 +32,7 @@ public class CompilerTest {
         String sql = Files.readString(Path.of("query.sql"));
         Scanner sc = new Scanner(sql);
         Query q = new Parser(sc.scan()).parseQuery();
-        new TypeChecker(Path.of("catalog.json")).check(q);
+        new TypeChecker(Path.of("data/catalog.json")).check(q);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream old = System.out;
         System.setOut(new PrintStream(baos));
