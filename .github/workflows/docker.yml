@@ -15,11 +15,10 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
       - name: Build JAR
-        working-directory: minisqlpp-compiler
         run: mvn -q -DskipTests package
       - name: Build and Push Image
         uses: docker/build-push-action@v5
         with:
-          context: minisqlpp-compiler
+          context: .
           push: true
           tags: ghcr.io/${{ github.repository }}:latest

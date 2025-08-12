@@ -12,9 +12,8 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
       - name: Build
-        working-directory: minisqlpp-compiler
         run: mvn -q -DskipTests package
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: minisqlpp-compiler/target/*-jar-with-dependencies.jar
+          files: target/*-jar-with-dependencies.jar
