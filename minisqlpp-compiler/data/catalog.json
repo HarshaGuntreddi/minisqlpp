@@ -1,0 +1,11 @@
+{
+  "users": {
+    "id": "INT",
+    "name": "STRING"
+  },
+  "orders": {
+    "id": "INT",
+    "user_id": "INT",
+    "total": "INT"
+  }
+}
