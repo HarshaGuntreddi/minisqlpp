@@ -12,10 +12,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
       - name: Build
-        working-directory: minisqlpp-compiler
         run: mvn -q -DskipTests package
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: minisqlpp-compiler-jar
-          path: minisqlpp-compiler/target/*-jar-with-dependencies.jar
+          path: target/*-jar-with-dependencies.jar
